@@ -1,0 +1,194 @@
+@import "base/base";
+@import "base/variables";
+@import "base/mixins";
+@import url(./fonts.css);
+
+// %login-signup-text {
+//     font-family: "Montserrat", sans-serif;
+//     font-size: 14px;
+//     font-weight: 400;
+//     color: white;
+//     text-decoration: none;
+
+.header {
+    width: 320px;
+    height: 540px;
+    margin: 0 auto;
+    padding: 20px;
+    background-image: url(../image/Background-mobile.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    text-align: center;
+
+    &__larg-text {
+        @include text($montserrat, 30px, 700, white);
+        margin-top: 26px;
+    }
+    &__small-text {
+        @include text($roboto, 18px, 300, #f7f3f2);
+        margin-top: 6px;
+    }
+    &__button-find {
+        width: 250px;
+        height: 40px;
+        border: none;
+        border-radius: 40px;
+        background-color: #ff4e50;
+        @include text($montserrat, 14px, 700, white);
+        margin-top: 15px;
+    }
+}
+
+.top {
+    height: 157px;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-between;
+    align-items: center;
+    &__logo {
+        @include text($montserrat, 20px, 700, white);
+        // font-family: "Montserrat", sans-serif;
+    }
+    &__nav {
+        &_login {
+            // @extend %login-signup-text;
+            @include text($montserrat, 14px, 400, white);
+            text-decoration: none;
+            margin-right: 34px;
+        }
+        &_signup {
+            // @extend %login-signup-text;
+            @include text($montserrat, 14px, 400, white);
+            text-decoration: none;
+            border: 2px solid white;
+            border-radius: 40px;
+            padding: 10px 18px;
+        }
+    }
+}
+.main {
+    width: 320px;
+    margin: 0 auto;
+}
+
+// HOW DREAMSHARE WORKS
+
+%button-style {
+    width: 70px;
+    height: 20px;
+    background-color: #ff4e50;
+    border: none;
+    border-radius: 40px;
+    @include text($montserrat, 10px, 400, #ffffff);
+}
+
+.how {
+    &__title {
+        @include text($montserrat, 22px, 700, #444444);
+        text-align: center;
+        margin-top: 34px;
+    }
+}
+.step {
+    display: flex;
+    flex-direction: column;
+
+    &__step1 {
+        width: 300px;
+        height: 240px;
+        margin: 15px auto 0;
+        background-image: url(../image/Step_1_mobile.png);
+        padding: 20px;
+        &_button {
+            @extend %button-style;
+            margin-top: 44px;
+        }
+        &_larg-text {
+            @include text($montserrat, 24px, 700, #ffffff);
+            margin-top: 44px;
+        }
+        &_small-text {
+            @include text($roboto, 14px, 300, #e3e3e3);
+            margin-top: 10px;
+        }
+    }
+    &__step2 {
+        width: 300px;
+        height: 240px;
+        margin: 10px auto 0;
+        background-image: url(../image/Step_2_mobile.png);
+        padding: 20px;
+        &_button {
+            @extend %button-style;
+            margin-top: 95px;
+        }
+        &_larg-text {
+            @include text($montserrat, 24px, 700, #ffffff);
+            margin-top: 17px;
+        }
+        &_small-text {
+            @include text($roboto, 14px, 300, #e3e3e3);
+            margin-top: 10px;
+        }
+    }
+    &__step3 {
+        width: 300px;
+        height: 240px;
+        margin: 10px auto 0;
+        background-image: url(../image/Step_3_mobile.png);
+        padding: 20px;
+        &_button {
+            @extend %button-style;
+            margin-top: 64px;
+        }
+        &_larg-text {
+            @include text($montserrat, 24px, 700, #ffffff);
+            margin-top: 15px;
+        }
+        &_small-text {
+            @include text($roboto, 14px, 300, #e3e3e3);
+            margin-top: 10px;
+        }
+    }
+}
+
+// PARTNERS
+.partners {
+    text-align: center;
+    margin-top: 36px;
+    &__title {
+        margin: 0 20px;
+        @include text($montserrat, 22px, 700, #444444);
+    }
+    &__button {
+        width: 280px;
+        height: 40px;
+        background-color: #fff;
+        border: 2px solid #ff4e50;
+        border-radius: 40px;
+        @include text($montserrat, 14px, 700, #ff4e50);
+        margin-top: 36px;
+    }
+}
+.partner {
+    &__first, &__second, &__third, &__fourth {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0 34px;
+        &_foto {
+            width: 120px;
+            height: 120px;
+            margin-top: 14px;
+        }
+        &_name {
+            @include text($montserrat, 14px, 700, #444444);
+            margin-top: 17px;
+        }
+        &_about {
+            @include text($roboto, 14px, 300, #666666);
+            margin-top: 12px;
+        }
+    }
+  
+}

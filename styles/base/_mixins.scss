@@ -1,0 +1,10 @@
+
+
+@mixin text ($f, $s, $w, $c)
+ {
+    font-family: $f;
+    font-size: $s;
+    font-weight: $w;
+    color: $c;
+ 
+}
