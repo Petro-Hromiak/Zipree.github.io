@@ -1,0 +1,21 @@
+
+
+@mixin text ($f, $s, $w, $c)
+ {
+    font-family: $f;
+    font-size: $s;
+    font-weight: $w;
+    color: $c;
+ 
+}
+@mixin wh ($wd, $h){
+    width: $wd;
+    height: $h;
+}
+
+@mixin dflex ($f, $d, $j, $a){
+    display: $f;
+    flex-direction: $d;
+    justify-content: $j;
+    align-items: $a;
+}
